@@ -1,0 +1,56 @@
+<div class="msg">
+    <div class="container">
+        <% if(locals.message.success) {%>
+            <div class="alert-success"><%= message.success %></div>
+            <% }%>
+    </div>
+</div>
+            <div class="container">
+           
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+            
+            
+                       
+            <% for(var i = 0; i<products.length; i++) { %>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td><a href="/details/<%= products[i]._id %>"><img class="productImage" src="asserts/img/<%= products[i].image %>"alt=""></a></td>
+                        
+
+<!-- 
+                    <h4><a href="/details/<%= products._id %>"><img class="productImage" src="asserts/img/<%= products[i].image %>"alt=""></a></h4>
+                    </div></td>
+                    <source> -->
+                    <!-- <td class="image"><img class="productImage"a href="/details/<%= products[i]._id %>" src="asserts/img/<%= products[i].image %>"alt=""></td> -->
+                    <td><%= products[i].title %></td>
+                    <td>₹<%= products[i].price %> /-</td>
+                    <td><%= products[i].qty %></td>
+                    <td><%= products[i].category %></td>
+                    <td><%= formate(products.updatedAt, "d,mmmm,yyyy")%></td>
+                </a>
+                </tr>
+                <% } %>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+                    </tbody>
+                </table>
+            
+        </div>
+ 

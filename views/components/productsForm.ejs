@@ -1,0 +1,27 @@
+<form action="/createProducts" method="POST" enctype="multipart/form-data">
+    <div class="group">
+       <h3>Add Products</h3>
+        <label for="title">Product Name</label>
+        <input type="name" name="title" id="title" class="control" placeholder="Product Name" value="<%= name %>">
+    </div>
+    <div class="group">
+       <label for="price">Price</label>
+       <input type="number" name="price" id="price" class="control" placeholder="R.s" value="<%= price %>">
+   </div>
+   <div class="group">
+       <label for="qty">qty</label>
+       <input type="number" name="qty" id="qty" class="control" placeholder="Product Quantity" value="<%= qty %>">
+   </div>
+   <div class="group">
+       <label for="category">Category</label>
+       <input type="text" name="category" id="category" class="control" placeholder="Write Category" value="<%= category %>">
+   </div>
+   <div class="group">
+       <label for="imageLabel" class="fileLabel">Upload image</label>
+       <input type="file" name="image" id="imageLabel">
+   </div>
+   <div class="group">
+       <input type="submit" value="Add Products" class="btn btn-sweet">
+   </div>
+</form> 
+

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="details">
+                <div class="details-link">
+                    <a href="/update/<%= details._id %>" class="btn btn-warning">Update</a>&nbsp;&nbsp;
+                    <form action="/delete" method="post" style="display: inline-block;">
+                        <input type="hidden" name='deleteID' value="<%= details._id %>">
+                      <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                </div>
+                <div class="details-image">
+                    <img src="/asserts/img/<%= details.image %>" alt="Products-image">
+                </div>
+                <div class="details-title"> Product Name
+                  <p><%= details.title %></p>
+                </div>
+               
+                <div class="details-price">Price
+                    <p>₹<%= details.price%> /-</p>
+                 
+                </div>
+                 <div class="details-qty">Product Quantity
+                     <p><%= details.qty %></p>
+
+                 </div>
+                 
+                 <div class="details-category">Product Category
+                     <p><%= details.category%></p>
+
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>

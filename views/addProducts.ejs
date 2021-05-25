@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asserts/css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title><%= title %></title>
+</head>
+<body>
+    <%- include("components/nav.ejs") %>
+     <div class="productsContainer">
+        <% if(errors.length > 0) { %>
+            <div class="errors errors-helper ">
+                  <% errors.forEach(error => { %>
+                      <span class="error"><%= error.msg %></span>
+                      <% }) %>
+            </div>
+          <% } %>
+        <%- include("components/productsForm") %>
+     </div>
+
+     <script>
+         let imageName = document.getElementById('imageLabel');
+         const label = document.querySelector('.fileLabel');
+         imageName.addEventListener("change", () => {
+             let val = imageName.value;
+             let split = val.split("\\");
+             let index = split.length - 1;
+             label.innerHTML = split[index]
+         });
+     </script>
+   
+</body>
+</html> 
