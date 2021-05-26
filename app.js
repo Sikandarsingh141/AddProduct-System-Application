@@ -13,7 +13,7 @@ env.config();
 //Express session middlware
 //it will create session collection in database and put the record of the  users
 const store = new MongoDBStore({
-    uri: 'mongodb://localhost/blog-website',
+    uri: process.env.DATABASE,
     collection: 'session'
 }) 
 app.use(session({
