@@ -65,7 +65,7 @@ const storeProducts = (req, res) => {
                                     try {
                                         const result = await newProduct.save();
                                         if (result) {
-                                            req.flash('success', "Your Account has been created successfully")
+                                            req.flash('success', "Your Product has been stored successfully")
                                            res.redirect('/products')
                                         }
                                     } catch (err) {
