@@ -51,13 +51,13 @@ body{
   height: calc(100vh - 70px);
 }
 .left-side{
-  width: 60%;
-  background: url("../img/cintamani-product-page.gif");
+  width: 50%;
+  background: url("../img/ecommerce-website-design-service.gif");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .right-side{
-  width: 40%;
+  width: 50%;
 }
 .form-container{
   display: flex;
