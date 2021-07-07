@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 //connect mongodb
 const connection = async() => {
     try{
-        await mongoose.connect("mongodb://localhost/CrudApplication", { useNewUrlParser: true ,useUnifiedTopology: true})
+        await mongoose.connect("mongodb://localhost/moontask", { useNewUrlParser: true ,useUnifiedTopology: true})
         console.log("Database Connected")
     }catch(err){
           console.log(err.message)
